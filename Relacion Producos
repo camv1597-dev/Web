@@ -1,0 +1,7 @@
+protected $fillable = ['name', 'description', 'price', 'stock', 'category_id', 'image'];
+
+public function category()
+{
+    // Un producto pertenece a una categoría
+    return $this->belongsTo(Category::class);
+}
